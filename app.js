@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const userRoutes = require('./routes/user-route');
 const postRoutes = require('./routes/posts')
 
@@ -9,6 +10,9 @@ const port = process.env.PORT || '3050';
 
 app.use(bodyParser.urlencoded({ extended : true }));
 app.use(bodyParser.json());
+app.use(cors({
+    origin: 'http://localhost:3000',
+}))
 app.use('/users',userRoutes)
 app.use('/posts',postRoutes)
 
