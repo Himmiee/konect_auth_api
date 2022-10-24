@@ -4,7 +4,7 @@ const userRoutes = require('./routes/user-route');
 const postRoutes = require('./routes/posts')
 
 const app = express();
-const port = 3050;
+const port = process.env.PORT || '3050';
 
 
 app.use(bodyParser.urlencoded({ extended : true }));
