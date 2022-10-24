@@ -111,8 +111,8 @@ router.post('/addMessage', (req, res) => {
         }
     })
 })
-router.post('/addUser', (req, res) => {
-    Message.create(req.body, (err, result) => {
+router.post('/addVolunteer', (req, res) => {
+    Volunteer.create(req.body, (err, result) => {
         if (err) {
             res.send({ message: "db error occured while inserting data", error: err })
         } else {
