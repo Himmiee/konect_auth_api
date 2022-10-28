@@ -10,7 +10,7 @@ const vSchema = new Schema({
     address: {type : String, required : true},
     gender: {type : String, required : true},
     postalCode: {type : Number, required : true},
-    reason: {type : String, required : true},
+    reason: {type : String},
     
 })
 
